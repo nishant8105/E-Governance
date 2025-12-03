@@ -1,6 +1,7 @@
 services:
   - type: web
     name: gemini-proxy
+    plan: free
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: uvicorn server.server:app --host 0.0.0.0 --port $PORT
