@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Gov Services</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <h1>Indian Digital Services</h1>
+      <p class="subtitle">Your gateway to government services</p>
+    </header>
+
+    <!-- TOP BAR (target positions for tabs) -->
+    <div id="topBar">
+      <div id="tabs" aria-hidden="true">
+        <div class="tab">Bhim UPI</div>
+        <div class="tab">DigiLocker</div>
+        <div class="tab">NVSP</div>
+        <div class="tab">UMANG</div>
+        <div class="tab">mAadhaar</div>
+        <div class="tab">mParivahan</div>
+        <div class="tab">IRCTC</div>
+        <div class="tab">Voter Helpline</div>
+        <div class="tab">Ayushman</div>
+        <div class="tab">MyGov</div>
+      </div>
+      <button id="backBtn">Back</button>
+    </div>
+
+    <!-- GRID of cards (Pic 1) -->
+    <div id="cardGrid" aria-hidden="false">
+      <div class="card" data-service="Bhim UPI">
+        <h2>Bhim UPI</h2>
+        <p>Unified Payments Interface for fast digital payments.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="DigiLocker">
+        <h2>DigiLocker</h2>
+        <p>Store and access your documents digitally.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="NVSP">
+        <h2>NVSP</h2>
+        <p>National Voters' Service Portal for voter services.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="UMANG">
+        <h2>UMANG</h2>
+        <p>One app for all government services.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+
+      <div class="card" data-service="mAadhaar">
+        <h2>mAadhaar</h2>
+        <p>Official Aadhaar app by UIDAI.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="mParivahan">
+        <h2>mParivahan</h2>
+        <p>Transport services and vehicle details.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="IRCTC">
+        <h2>IRCTC</h2>
+        <p>Train ticket booking and status.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="Voter Helpline">
+        <h2>Voter Helpline</h2>
+        <p>Voter registration and election info.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="Ayushman">
+        <h2>Ayushman</h2>
+        <p>Ayushman Bharat health card services.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+      <div class="card" data-service="MyGov">
+        <h2>MyGov</h2>
+        <p>Citizen engagement platform.</p>
+        <button class="viewBtn">View Info</button>
+      </div>
+
+      <a href="/chatbot/" class="chat-bot-trigger">
+        <img src="bot.png" alt="chat bot" />
+      </a>
+    </div>
+
+    <!-- Large info panel (Pic 2) -->
+    <div id="infoPanel" aria-hidden="true"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

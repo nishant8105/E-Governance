@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Gov App Helper — Smart Chatbot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <button id="backBtnHeader" class="link-btn" title="Back">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <h1>Government App Helper</h1>
+    </header>
+
+    <main class="container">
+      <section class="controls panel">
+        <div class="row">
+          <label class="field">
+            Language
+            <select id="language" aria-label="Language">
+              <option value="english" selected>English</option>
+              <option value="hindi">हिंदी</option>
+              <option value="marathi">मराठी</option>
+              <option value="bengali">বাংলা</option>
+              <option value="tamil">தமிழ்</option>
+              <option value="telugu">తెలుగు</option>
+              <option value="gujarati">ગુજરાતી</option>
+              <option value="kannada">ಕನ್ನಡ</option>
+              <option value="malayalam">മലയാളം</option>
+              <option value="punjabi">ਪੰਜਾਬੀ</option>
+              <option value="odia">ଓଡ଼ିଆ</option>
+            </select>
+          </label>
+
+          <label class="field">
+            App
+            <select id="app" aria-label="App">
+              <option value="umang">UMANG</option>
+              <option value="bhim">BHIM UPI</option>
+              <option value="nvsp">NVSP</option>
+              <option value="digilocker">DigiLocker</option>
+              <option value="maadhaar">mAadhaar</option>
+              <option value="mparivahan">mParivahan</option>
+              <option value="irctc">IRCTC</option>
+              <option value="voter">Voter Helpline</option>
+              <option value="ayushman">Ayushman</option>
+              <option value="mygov">MyGov</option>
+              <option value="problems">Common Problems</option>
+            </select>
+          </label>
+
+          <label class="field">
+            Problem
+            <select id="problem" aria-label="Problem">
+              <option value="">— Select Problem —</option>
+              <option value="password">Password / PIN</option>
+              <option value="otp">OTP not coming</option>
+              <option value="upload">Upload / File</option>
+              <option value="registration">Registration Failed</option>
+              <option value="crash">App Not Opening / Crashing</option>
+              <option value="payment">Payment Failed</option>
+              <option value="link_aadhaar">Link Aadhaar Issue</option>
+              <option value="wrong_details">Wrong Details in Profile</option>
+            </select>
+          </label>
+
+          <div class="field actions">
+            <button id="showBtn" class="btn primary">Show Info</button>
+            <button id="clearBtn" class="btn">Clear</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel info-panel">
+        <div id="output" class="output hidden" aria-live="polite"></div>
+      </section>
+
+      <section class="panel chat-panel">
+        <div class="chat-header">
+          <h2>Chatbot Assistant</h2>
+          <div class="chat-controls">
+            <button id="voiceBtn" class="btn">🎤</button>
+          </div>
+        </div>
+
+        <div id="chatArea" class="chat-area" aria-live="polite"></div>
+
+        <div id="inputBoxWrapper" class="input-wrapper">
+          <input
+            id="inputText"
+            type="text"
+            placeholder="Ask anything — e.g. 'BHIM OTP not coming'"
+          />
+          <div id="buttonRow" class="button-row">
+            <button id="sendBtn" class="btn primary">Send</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <small
+        >Tip: Type "password", "otp", or "upload" for quick fixes. Other queries
+        answered by Gemini.</small
+      >
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="chat.js"></script>
+  </body>
+</html>
